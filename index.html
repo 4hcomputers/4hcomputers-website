@@ -1,0 +1,344 @@
+<html style="scroll-behavior: smooth;">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<title>4H Computers</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <link href="//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" rel="stylesheet" type="text/css" /> -->
+</head>
+<style>
+	@import url("860c3ec7bbc5da3e97233ccecafe512e.ttf");
+
+	h1,
+	h2,
+	p,
+	a,
+	td {
+		font-family: Circular Std Book, sans-serif;
+		color: black;
+		letter-spacing: 0.3px;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	h1,
+	h2 {
+		font-weight: 575;
+	}
+
+	@font-face {
+		font-family: "Circular Std Book";
+		src: url("860c3ec7bbc5da3e97233ccecafe512e.eot");
+		/* IE9*/
+		src: url("860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix") format("embedded-opentype"),
+			/* IE6-IE8 */
+			url("860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2"),
+			/* chrome、firefox */
+			url("860c3ec7bbc5da3e97233ccecafe512e.woff") format("woff"),
+			/* chrome、firefox */
+			url("860c3ec7bbc5da3e97233ccecafe512e.ttf") format("truetype"),
+			/* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+			url("860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book") format("svg");
+		/* iOS 4.1- */
+	}
+
+	#cover {
+		width: 100%;
+		height: 80%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background: url('20190806_201342.jpg');
+		box-shadow: inset 0 0 0 100vh #FFFFFFbb;
+		background-size: cover;
+		background-position: 50%;
+		padding-top: 48px;
+	}
+
+	.section {
+		width: 100%;
+		padding-top: 64px;
+		padding-bottom: 64px;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.sectionheader {
+		width: 40%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding-right: 48px;
+		padding-left: 15%;
+	}
+
+	.sectioncontent {
+		width: 60%;
+		align-items: center;
+		justify-content: flex-start;
+		padding-right: 15%;
+		padding-left: 16px;
+	}
+
+	#headerbar {
+		height: 48px;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		width: 100%;
+		z-index: 5;
+		box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.39);
+		/* -webkit-box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.74);
+		-moz-box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.74); */
+	}
+
+	@supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+		#headerbar {
+			-webkit-backdrop-filter: blur(32px) brightness(120%);
+			backdrop-filter: blur(32px) brightness(120%);
+			background-color: #FFFFFF88;
+		}
+	}
+
+	.headerlink {
+		margin-right: 8px;
+		margin-left: 8px;
+		text-decoration: none;
+	}
+
+	#linkscontainer>a {
+		text-decoration: none;
+		margin-right: 16px;
+		margin-left: 16px;
+		margin-top: 32px;
+	}
+
+	.linkbox {
+		width: 178px;
+		height: 178px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #a5d6a7;
+		/* background-color: #54cf54; */
+		border-radius: 24px;
+		flex-direction: column;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.linkboxtext {
+		margin-bottom: 0;
+		pointer-events: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+	}
+
+	.link-button-icons {
+		width: 48px;
+		height: 48px;
+	}
+
+	.material-icons {
+		pointer-events: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+	}
+
+	.hoverfancy {
+		transition: all 240ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+	.hoverfancy:hover {
+		transform: scale(1.14);
+	}
+
+	.hoverfancy:active {
+		transform: scale(1.06);
+	}
+
+	#linkscontainer {
+		flex-direction: row;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@media screen and (max-width: 632px) {
+		.hoverfancy:hover {
+			transform: none;
+		}
+
+		.hoverfancy:active {
+			transform: scale(0.94);
+		}
+
+		#linkscontainer {
+			flex-direction: column;
+		}
+
+		#cover {
+			height: 40%;
+		}
+
+		#coverdescription {
+			display: none;
+		}
+
+		.section {
+			width: 100%;
+			padding-top: 64px;
+			padding-bottom: 64px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.sectionheader {
+			width: auto;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+		.sectioncontent {
+			width: auto;
+			align-items: center;
+			justify-content: flex-start;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+	}
+</style>
+
+<body style="margin: 0;">
+	<div id="headerbar">
+		<a href="#cover" class="headerlink">Home</a>
+		<a href="#about" class="headerlink">About</a>
+		<a href="#contact" class="headerlink">Contact</a>
+		<a href="#links" class="headerlink">Links</a>
+	</div>
+	<div id="cover">
+		<img src="4H T-Shirt Front 2019 Cropped Export 2.svg" style="width: 80%; filter: invert(0);"
+			alt="4H Computers Logo">
+		<h1 id="coverdescription" style="color: black;">A Somerset County NJ 4H Club.</h1>
+	</div>
+	<div id="about" class="section" style="background-color: #d7ffd9;">
+		<div class="sectionheader">
+			<h1>About</h1>
+		</div>
+		<div class="sectioncontent">
+			<p>
+			<h2>We are 4H Computers</h2>
+			</p>
+			<p>Our club is for people who are interested in computers, and want a way to share their ideas with others.
+				In doing this, they can get help from other members who may know the answers to their questions. We have
+				many donated computers and electronics hardware that members can experiment and learn with, as well as a
+				3D printer which members can request parts be printed on, and a server on which we can host certain
+				projects. And in August, we have the 4H fair, where
+				members can have the experience of sharing their projects with the public, and teaching people all of
+				what they learned. We established this club in November of 2017. Some projects members have done
+				include: building websites and working with web protocols, setting up servers, building messaging bots,
+				building hardware robots, and more. We also
+				went on a field trip to the Rutgers Makerspace, to learn about 3D printing in biomedical engineering.
+				The goal of our club is for
+				members to be able to use their experience with us to help people outside of 4H. While no
+				prior experience is neccesary, and we would be happy to teach you about the various concepts we are
+				familiar with,
+				we find that members who are already somewhat knowledgeable about computers tend to have a better
+				experience.
+			</p>
+			<p>
+			<h2>Age Group</h2>
+			</p>
+			<p>We have members at many different ages, but most of them are in middle school or high school.</p>
+			<p>
+			<h2>Meeting Dates and Times</h2>
+			</p>
+			<p>We meet every first and third Friday, from 7PM to 9PM. The 9PM ending time is not concrete during
+				COVID-19.
+				This used to be the time that the 4H center closed, but now, since we are online, we can make our
+				meetings last however long we want.</p>
+			<p>
+			<h2>Where</h2>
+			</p>
+			<p>During normal times, we would meet at the Ted Blum 4H Center, but we are virtual at the moment, and so we
+				are meeting on Discord.</p>
+		</div>
+	</div>
+	<div id="contact" class="section" style="background-color: white;">
+		<div class="sectionheader">
+			<h1>Contact and Join</h1>
+		</div>
+		<div class="sectioncontent">
+			<p>
+			<h2>Let's get in touch.</h2>
+			</p>
+			<p>Have you or your parent email Paul Westbrook at <a
+					href="mailto:pswestbrook@gmail.com">pswestbrook@gmail.com</a>. Mr. Westbrook is our club's main
+				adult leader.
+				In addition, you may join our Discord server using the link below. Once you are on the Discord, an admin
+				will grant you the member role, and you may feel free to ask questions
+				or join our next meeting in its Discord voice channel.</p>
+		</div>
+	</div>
+	<div id="links" class="section" style="background-color: #d7ffd9;">
+		<div style="display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%;">
+			<h1 style="margin: 0;">Links</h1>
+			<div id="linkscontainer">
+				<a href="https://discord.gg/nKcpYJC">
+					<div class="linkbox hoverfancy">
+						<!-- <i class="material-icons" style="font-size: 64px;">launch</i> -->
+						<svg aria-hidden="true" focusable="false" data-icon="discord" role="img"
+							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="link-button-icons">
+							<path
+								d="M19.952,5.672c-1.904-1.531-4.916-1.79-5.044-1.801c-0.201-0.017-0.392,0.097-0.474,0.281c-0.006,0.012-0.072,0.163-0.145,0.398c1.259,0.212,2.806,0.64,4.206,1.509c0.224,0.139,0.293,0.434,0.154,0.659c-0.09,0.146-0.247,0.226-0.407,0.226c-0.086,0-0.173-0.023-0.252-0.072C15.584,5.38,12.578,5.305,12,5.305S8.415,5.38,6.011,6.872c-0.225,0.14-0.519,0.07-0.659-0.154c-0.14-0.225-0.07-0.519,0.154-0.659c1.4-0.868,2.946-1.297,4.206-1.509c-0.074-0.236-0.14-0.386-0.145-0.398C9.484,3.968,9.294,3.852,9.092,3.872c-0.127,0.01-3.139,0.269-5.069,1.822C3.015,6.625,1,12.073,1,16.783c0,0.083,0.022,0.165,0.063,0.237c1.391,2.443,5.185,3.083,6.05,3.111c0.005,0,0.01,0,0.015,0c0.153,0,0.297-0.073,0.387-0.197l0.875-1.202c-2.359-0.61-3.564-1.645-3.634-1.706c-0.198-0.175-0.217-0.477-0.042-0.675c0.175-0.198,0.476-0.217,0.674-0.043c0.029,0.026,2.248,1.909,6.612,1.909c4.372,0,6.591-1.891,6.613-1.91c0.198-0.172,0.5-0.154,0.674,0.045c0.174,0.198,0.155,0.499-0.042,0.673c-0.07,0.062-1.275,1.096-3.634,1.706l0.875,1.202c0.09,0.124,0.234,0.197,0.387,0.197c0.005,0,0.01,0,0.015,0c0.865-0.027,4.659-0.667,6.05-3.111C22.978,16.947,23,16.866,23,16.783C23,12.073,20.985,6.625,19.952,5.672z M8.891,14.87c-0.924,0-1.674-0.857-1.674-1.913s0.749-1.913,1.674-1.913s1.674,0.857,1.674,1.913S9.816,14.87,8.891,14.87z M15.109,14.87c-0.924,0-1.674-0.857-1.674-1.913s0.749-1.913,1.674-1.913c0.924,0,1.674,0.857,1.674,1.913S16.033,14.87,15.109,14.87z" />
+						</svg>
+						<h2 class="linkboxtext">Discord</h2>
+					</div>
+				</a>
+				<a href="https://wiki.4hcomputers.club">
+					<div class="linkbox hoverfancy">
+						<svg aria-hidden="true" focusable="false" data-icon="wiki" role="img"
+							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="link-button-icons">
+							<g>
+								<!--path stroke="black" stroke-width="3" d="M12.5,60.5a1.75,1.75,0,0,0-1.75,1.75V81.692a1.75,1.75,0,0,0,3.5,0V62.25A1.75,1.75,0,0,0,12.5,60.5Z"/-->
+								<path stroke="black" stroke-width="3"
+									d="M78.333,76.3H23.667a1.75,1.75,0,0,0,0,3.5H78.333a1.75,1.75,0,0,0,0-3.5Z" />
+								<path stroke="black" stroke-width="3"
+									d="M78.333,85.946H23.667a1.75,1.75,0,0,0,0,3.5H78.333a1.75,1.75,0,0,0,0-3.5Z" />
+								<path stroke="black" stroke-width="2"
+									d="M97.25,4.75c-.466,0-.929.014-1.39.038a1.772,1.772,0,0,0-.36-.038H15.35a10.612,10.612,0,0,0-10.6,10.6v97.3h0v0a10.608,10.608,0,0,0,10.6,10.6H95.5a1.75,1.75,0,0,0,1.75-1.75V56.75a26,26,0,0,0,0-52ZM119.675,29h-9.811c-.251-8.14-2.246-15.146-5.247-19.505A22.544,22.544,0,0,1,119.675,29ZM97.25,53.25c-4.131,0-8.7-8.44-9.105-20.75h18.21C105.952,44.81,101.381,53.25,97.25,53.25ZM74.825,29A22.544,22.544,0,0,1,89.883,9.495c-3,4.359-5,11.365-5.247,19.505ZM71.25,30.75A25.866,25.866,0,0,0,76.58,46.5V60.65H25.42V20.5H73.359A25.858,25.858,0,0,0,71.25,30.75Zm3.575,1.75h9.811c.251,8.14,2.246,15.146,5.247,19.505A22.544,22.544,0,0,1,74.825,32.5ZM88.145,29c.4-12.31,4.974-20.75,9.105-20.75s8.7,8.44,9.105,20.75Zm-72.8,90.75a7.1,7.1,0,0,1,0-14.192h78.4V110.9H19.333a1.75,1.75,0,0,0,0,3.5H93.75v5.346Zm78.4-17.692h-78.4a10.543,10.543,0,0,0-7.1,2.749V15.35a7.108,7.108,0,0,1,7.1-7.1h68.9A26.188,26.188,0,0,0,75.2,17H23.67a1.75,1.75,0,0,0-1.75,1.75V62.4a1.75,1.75,0,0,0,1.75,1.75H78.33a1.75,1.75,0,0,0,1.75-1.75V50.25a25.906,25.906,0,0,0,13.67,6.258Zm10.867-50.053c3-4.359,5-11.365,5.247-19.505h9.811A22.544,22.544,0,0,1,104.617,52.005Z" />
+							</g>
+						</svg>
+						<h2 class="linkboxtext">Wiki</h2>
+					</div>
+				</a>
+				<a href="https://4hcomputers.wordpress.com">
+					<div class="linkbox hoverfancy">
+						<svg aria-hidden="true" focusable="false" data-icon="wordpress" role="img"
+							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="link-button-icons">
+							<path
+								d="M256 8C119.3 8 8 119.2 8 256c0 136.7 111.3 248 248 248s248-111.3 248-248C504 119.2 392.7 8 256 8zM33 256c0-32.3 6.9-63 19.3-90.7l106.4 291.4C84.3 420.5 33 344.2 33 256zm223 223c-21.9 0-43-3.2-63-9.1l66.9-194.4 68.5 187.8c.5 1.1 1 2.1 1.6 3.1-23.1 8.1-48 12.6-74 12.6zm30.7-327.5c13.4-.7 25.5-2.1 25.5-2.1 12-1.4 10.6-19.1-1.4-18.4 0 0-36.1 2.8-59.4 2.8-21.9 0-58.7-2.8-58.7-2.8-12-.7-13.4 17.7-1.4 18.4 0 0 11.4 1.4 23.4 2.1l34.7 95.2L200.6 393l-81.2-241.5c13.4-.7 25.5-2.1 25.5-2.1 12-1.4 10.6-19.1-1.4-18.4 0 0-36.1 2.8-59.4 2.8-4.2 0-9.1-.1-14.4-.3C109.6 73 178.1 33 256 33c58 0 110.9 22.2 150.6 58.5-1-.1-1.9-.2-2.9-.2-21.9 0-37.4 19.1-37.4 39.6 0 18.4 10.6 33.9 21.9 52.3 8.5 14.8 18.4 33.9 18.4 61.5 0 19.1-7.3 41.2-17 72.1l-22.2 74.3-80.7-239.6zm81.4 297.2l68.1-196.9c12.7-31.8 17-57.2 17-79.9 0-8.2-.5-15.8-1.5-22.9 17.4 31.8 27.3 68.2 27.3 107 0 82.3-44.6 154.1-110.9 192.7z"
+								class=""></path>
+						</svg>
+						<h2 class="linkboxtext">WordPress</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="section"
+		style="background-color: white; justify-content: center; align-items: center; padding-top: 0; padding-bottom: 0; flex-direction: column;">
+		<p style="text-align: center; margin-right: 16px; margin-left: 16px; hyphens: none;">Website built by <a
+				href="https://cy2.me/">Cy Westbrook</a><br>4H Computers is a
+			part of <a style="white-space: nowrap;" href="https://4histops.org/">Somerset County <span
+					style="white-space: nowrap;">4-H</span></a></p>
+	</div>
+</body>
+
+</html>
